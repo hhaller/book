@@ -1,0 +1,29 @@
+- Desempacar codeigniter
+- cambiarle el nombre al folder desempacado -> 'book'
+- quitar folder user_guide
+- Ir a sitio github y hacer un nuevo proyecto 'book'
+- subirlo a github
+/* ------------- GIT ---------------------- */
+$ git init
+$ git status
+$ git add -A
+$ git status # give a list of pending updates
+[ si se olvidó quitar user_guide ] -> git rm -r --cached user_guide/
+$ git commit -m "Initializing"
+$ git remote add origin https://github.com/hhaller/book.git
+$ git push -u origin --all
+[ si presenta problemas, si aplica, forzarlo] -> git push -f origin --all
+.
+.
+.
+
+/* ------------- heroku ---------------------- */
+Se configuró heroku para conectarse directamente con github, de tal forma
+que en auto, se actualiza heroku al actualizarse github.
+
+Heroku con problemas, al parecer, con codeigniter necesita 'composer',
+- quitar 'composer.lock' de .gitignore
+- $ composer update
+
+/* ----------- new branch ------------ */
+$ git checkout -b pagina-principal
